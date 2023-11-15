@@ -26,4 +26,4 @@ jobs:
           username: ${{ secrets.RADEON_SSH_USER }}
           key: ${{ secrets.RADEON_SSH_PRIVATE_KEY }}
           port: ${{ secrets.RADEON_SSH_PORT }}
-          script: docker compose -f ${{ github.event.repository.name }}docker-compose.yml up -d
+          script: docker compose -f ${{ github.event.repository.name }}/docker-compose.yml up -d
