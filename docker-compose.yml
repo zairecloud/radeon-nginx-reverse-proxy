@@ -29,8 +29,8 @@ services:
       - nginx-proxy_network
       
 networks:
-  - nginx-proxy_network:
-      external : true
+  nginx-proxy_network:
+    external: true
 
 volumes:
   vhost:
