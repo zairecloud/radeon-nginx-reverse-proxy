@@ -29,7 +29,6 @@ services:
       - nginx-proxy_network
 
 volumes:
-  ./conf:
   vhost:
   html:
   certs:
