@@ -15,20 +15,20 @@ services:
       - nginx-proxy_network
     restart: unless-stopped
 
-  nginx-proxy-manager:
-    container_name: nginx
-    image: 'jc21/nginx-proxy-manager:latest'
-    restart: unless-stopped
-    expose:
-      - '80'
-    volumes:
-      - ./data:/data
-    networks:
-      - nginx-proxy_network
-    environment:
-      - "VIRTUAL_HOST=nginx.zairecloud.pt"
-      - "VIRTUAL_PORT=80"
-      - "LETSENCRYPT_HOST=nginx.zairecloud.pt"
+  # nginx-proxy-manager:
+  #   container_name: nginx
+  #   image: 'jc21/nginx-proxy-manager:latest'
+  #   restart: unless-stopped
+  #   expose:
+  #     - '80'
+  #   volumes:
+  #     - ./data:/data
+  #   networks:
+  #     - nginx-proxy_network
+  #   environment:
+  #     - "VIRTUAL_HOST=nginx.zairecloud.pt"
+  #     - "VIRTUAL_PORT=80"
+  #     - "LETSENCRYPT_HOST=nginx.zairecloud.pt"
 
   acme-companion:
     image: nginxproxy/acme-companion
